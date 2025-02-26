@@ -1,0 +1,20 @@
+@use './typography';
+@use './variables' as *;
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: $outfit;
+}
+
+body {
+    color: $black;
+    background-color: $pistachio;
+}

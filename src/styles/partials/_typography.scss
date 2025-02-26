@@ -1,0 +1,37 @@
+@use './variables' as *;
+
+@font-face {
+    font-family: $newsreader;
+    src: url("./assets/fonts/Newsreader-Regular.woff") format("woff"),
+        url("./assets/fonts/alternative/Newsreader-Regular.woff2") format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: $newsreader;
+    src: url("./assets/fonts/Newsreader-Light.woff") format("woff"),
+        url('./assets/fonts/alternative/Newsreader-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: $newsreader;
+    src: url("./assets/fonts/Newsreader-LightItalic.woff") format("woff"),
+        url('./assets/fonts/alternative/Newsreader-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: $outfit;
+    src: url("./assets/fonts/Outfit-Medium.woff") format('woff'),
+        url("./assets/fonts/alternative/Outfit-Medium.woff2") format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: $outfit;
+    src: url("./assets/fonts/Outfit-Light.woff") format('woff'),
+        url("./assets/fonts/alternative/Outfit-Light.woff2") format('woff2');
+    font-weight: 300;
+}

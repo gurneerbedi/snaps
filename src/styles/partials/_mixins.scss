@@ -1,0 +1,74 @@
+@use './variables' as *;
+@use './breakpoints' as *;
+
+@mixin title {
+    font-size: 1.625rem;
+    line-height: 2.375rem;
+    font-family: $serif-font-stack;
+    font-weight: 300;
+
+    @include tablet {
+        font-size: 3.25rem;
+        line-height: 4.125rem;
+    }
+}
+
+@mixin wordmark {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-family: $serif-font-stack;
+    font-weight: 400;
+
+    @include tablet {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+@mixin heading {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    font-family: $sans-serif-font-stack;
+    font-weight: 500;
+
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+    }
+}
+
+@mixin body-copy {
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    font-family: $sans-serif-font-stack;
+    font-weight: 500;
+
+    @include tablet {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+    }
+}
+
+@mixin small-body-copy {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    font-family: $sans-serif-font-stack;
+    font-weight: 500;
+
+    @include tablet {
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+    }
+}
+
+@mixin label {
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    font-family: $sans-serif-font-stack;
+    font-weight: 500;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.09375rem;
+    }
+}
