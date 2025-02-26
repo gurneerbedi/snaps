@@ -1,0 +1,28 @@
+@use "../../styles/partials/variables" as *;
+
+@use "../../styles/partials/mixins" as *;
+
+.tag {
+    padding: 0.25rem 0.5rem;
+    background-color: $secondary-light;
+    border-radius: 0.5rem;
+    border: 1px solid $primary-medium;
+    color: $primary-medium;
+    cursor: pointer;
+    @include small-body-copy;
+
+    &--filled {
+        color: $secondary-light;
+        background-color: $primary-medium;
+    }
+
+    &--not-clickable {
+        cursor: default;
+        border: 1px solid $secondary-dark;
+
+        &.tag--filled {
+            color: $primary-dark;
+            background-color: $secondary-dark;
+        }
+    }
+}

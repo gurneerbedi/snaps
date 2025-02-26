@@ -1,0 +1,48 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.filters {
+    background-color: $secondary-medium;
+    padding: $mobile-side-gutter;
+    min-width: 25%;
+
+    @include tablet {
+        padding-bottom: 5rem;
+    }
+
+    &__header {
+        margin-bottom: 1rem;
+        @include heading;
+
+        @include desktop {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 0.5rem;
+        flex: 1;
+    }
+
+    &__tag {
+        @include body-copy;
+
+        @include tablet {
+            font-size: 0.85rem;
+        }
+    }
+
+    &__close {
+        display: none;
+
+        @include desktop {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 4rem;
+        }
+    }
+}
