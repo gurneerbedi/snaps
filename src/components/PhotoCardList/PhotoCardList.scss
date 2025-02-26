@@ -1,0 +1,10 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.photo-card-list {
+    order: 3;
+    margin: 3rem $mobile-side-gutter;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
