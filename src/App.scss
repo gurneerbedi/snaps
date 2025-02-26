@@ -1,0 +1,12 @@
+@use './styles/partials/globals';
+@use './styles/partials/breakpoints' as *;
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include desktop {
+        flex-direction: row;
+    }
+}

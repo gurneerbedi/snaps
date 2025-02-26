@@ -1,0 +1,22 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+@use '../../styles/partials/breakpoints' as *;
+
+.header {
+    order: 0;
+    margin: 1.5rem $mobile-side-gutter;
+    height: 2.5rem;
+    display: flex;
+    width: 96%;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+        @include wordmark;
+
+        @include tablet {
+            font-weight: 300;
+        }
+    }
+}

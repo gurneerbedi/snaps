@@ -1,0 +1,95 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.footer {
+    padding: $mobile-side-gutter;
+
+    &__header {
+        margin: 1rem 0;
+        @include wordmark;
+
+        @include tablet {
+            width: 48%;
+        }
+
+        @include desktop {
+            width: 48%;
+        }
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        @include tablet {
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+
+        @include desktop {
+            justify-content: space-between;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__socials {
+        @include tablet {
+            width: 100%;
+            padding-top: 10rem
+        }
+
+        @include desktop {
+            width: unset;
+            padding-top: 0;
+            padding-right: 0.5rem;
+        }
+    }
+
+    &__text-links {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            width: 48%;
+            flex-direction: row;
+            gap: 5rem;
+        }
+
+        @include desktop {
+            width: unset;
+            flex-grow: 2;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem 0;
+        gap: 0.5rem;
+
+        @include body-copy;
+
+        &--horizontal {
+            flex-direction: row;
+            gap: 1rem;
+            align-items: center;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $primary-dark;
+
+        &--light {
+            color: $secondary-dark;
+
+            @include tablet {
+                @include small-body-copy;
+            }
+        }
+    }
+}

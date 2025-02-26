@@ -1,0 +1,38 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.mission {
+    margin: 0 $mobile-side-gutter;
+    order: 2;
+
+    @include desktop {
+        width: 50%;
+        min-width: 40rem;
+    }
+
+    &__header {
+        font-weight: 300;
+        margin: 3rem 0 1rem;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+
+        @include tablet {
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+        }
+    }
+
+    &__body {
+        @include title;
+
+        &--emphasis {
+            font-family: $serif-font-stack;
+        }
+
+        @include tablet {
+            line-height: 4.5rem;
+            font-size: 2.5rem;
+        }
+    }
+}

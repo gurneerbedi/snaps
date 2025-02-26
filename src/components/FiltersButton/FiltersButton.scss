@@ -1,0 +1,24 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.filters-button {
+    background-color: $secondary-light;
+    color: $primary-medium;
+    padding: 0.3rem 0.9rem;
+    border: 2px solid $primary-medium;
+    border-radius: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    fill: $primary-medium;
+
+    @include tablet {
+        padding: 0.5rem 1.5rem;
+    }
+
+    &:hover {
+        background-color: $primary-medium;
+        color: $secondary-light;
+        fill: $secondary-light;
+    }
+}
