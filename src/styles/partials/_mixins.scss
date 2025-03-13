@@ -1,5 +1,5 @@
-@use './variables' as *;
-@use './breakpoints' as *;
+@use "./variables" as *;
+@use "./breakpoints" as *;
 
 @mixin title {
     font-size: 1.625rem;
@@ -38,8 +38,8 @@
 }
 
 @mixin body-copy {
-    font-size: 0.75rem;
-    line-height: 0.9375rem;
+    font-size: 0.85rem;
+    line-height: 1rem;
     font-family: $sans-serif-font-stack;
     font-weight: 500;
 
@@ -50,8 +50,8 @@
 }
 
 @mixin small-body-copy {
-    font-size: 0.625rem;
-    line-height: 0.75rem;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
     font-family: $sans-serif-font-stack;
     font-weight: 500;
 
@@ -71,4 +71,12 @@
         font-size: 0.875rem;
         line-height: 1.09375rem;
     }
+}
+
+@mixin photo-card {
+    background-color: $secondary-medium;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: 1px solid $secondary-dark;
+    color: $primary-dark;
 }

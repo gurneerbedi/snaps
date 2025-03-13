@@ -1,0 +1,24 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment {
+    margin: 1rem 0;
+
+    &__separator {
+        color: $secondary-dark;
+        height: 1px;
+    }
+
+    &__small-details {
+        display: flex;
+        justify-content: space-between;
+        color: $primary-medium;
+        margin: 1rem 0 0.75rem 0;
+        @include small-body-copy;
+    }
+
+    &__text {
+        margin: 0.5rem 0;
+        @include body-copy;
+    }
+}

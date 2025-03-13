@@ -1,0 +1,16 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.photo-page {
+    &__main-content {
+        margin: 4rem $mobile-side-gutter;
+        max-width: 60rem;
+
+        @include tablet {
+            padding: 0 1.5rem;
+            margin: 4rem auto;
+        }
+
+    }
+}

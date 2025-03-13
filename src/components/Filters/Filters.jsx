@@ -1,27 +1,25 @@
-import filters from "../../data/tags.json";
+import { useState, useEffect } from "react";
 import Tag from "../Tag/Tag";
-import IconButton from "../IconButton/IconButton";
-import close from "../../assets/images/icons/Close.svg";
+import * as apiService from "../../services/apiService";
 import "./Filters.scss";
 
-const Filters = ({
-    selectedFilter,
-    setSelectedFilter,
-    handleClose,
-    showClose = false,
-}) => {
+const Filters = ({ selectedFilter, setSelectedFilter }) => {
+    const [tags, setTags] = useState([]);
+
+    useEffect(() => {
+        async function getTags() {
+            const data = await apiService.getTags();
+            setTags(data);
+        }
+
+        getTags();
+    }, []);
+
     return (
         <section className="filters">
-            {showClose && (
-                <div className="filters__close">
-                    <IconButton onClick={handleClose}>
-                        <img src={close} alt="X to close icon" />
-                    </IconButton>
-                </div>
-            )}
             <h3 className="filters__header">Filters</h3>
             <div className="filters__list">
-                {filters.map((filter) => (
+                {tags.map((filter) => (
                     <Tag
                         key={filter}
                         clickable

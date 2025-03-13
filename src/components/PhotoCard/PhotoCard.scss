@@ -3,10 +3,8 @@
 @use '../../styles/partials/breakpoints' as *;
 
 .photo-card {
-    background-color: $secondary-light;
-    border-radius: 0.5rem;
-    width: 100%;
-    border: 1px solid $secondary-dark;
+    @include photo-card;
+    text-decoration: none;
 
     @include tablet {
         width: 48%;
@@ -14,29 +12,8 @@
 
     @include desktop {
         width: 32%;
+        max-width: 31vw;
         flex-grow: 1;
-    }
-
-    &__photo {
-        position: relative;
-    }
-
-    &__image {
-        width: 100%;
-        display: block;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-    }
-
-    &__photographer {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background-color: $secondary-medium;
-        border-top-left-radius: .5rem;
-        border-bottom: 0.5px solid $secondary-dark;
-        padding: 0.5rem;
-        @include small-body-copy;
     }
 
     &__tags {

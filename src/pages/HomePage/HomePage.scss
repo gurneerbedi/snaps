@@ -1,0 +1,20 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.home {
+    width: 100%;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__always-shown {
+        width: 100%;
+        padding: 0 $mobile-side-gutter;
+    }
+}

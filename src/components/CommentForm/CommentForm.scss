@@ -1,0 +1,15 @@
+@use '../../styles/partials/globals' as *;
+@use '../../styles/partials/variables' as *;
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+    padding: 3rem 0 2rem 0;
+
+    &__submit {
+        align-self: flex-end;
+    }
+}

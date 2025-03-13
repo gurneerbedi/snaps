@@ -1,0 +1,56 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/mixins" as *;
+
+.button {
+    padding: 0.3rem 0.9rem;
+    border: 2px solid $primary-medium;
+    border-radius: 0.4rem;
+    display: flex;
+    gap: 0.5rem;
+    background-color: $primary-medium;
+    color: $secondary-light;
+    align-items: center;
+    @include body-copy;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include tablet {
+        padding: 0.5rem 1.5rem;
+    }
+
+    &:hover {
+        border-color: rgba($primary-medium, 0.8);
+        background-color: rgba($primary-medium, 0.8);
+    }
+
+    &--neutral {
+        border-radius: 2rem;
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+        color: $primary-medium;
+        border: none;
+        background-color: transparent;
+        gap: 0.7rem;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &--secondary {
+        background-color: $secondary-dark;
+        border-radius: 2rem;
+        color: $primary-medium;
+        fill: $primary-medium;
+
+        &:hover,
+        &.button--selected {
+            background-color: $primary-medium;
+            color: $secondary-light;
+            fill: $secondary-light;
+        }
+    }
+}
