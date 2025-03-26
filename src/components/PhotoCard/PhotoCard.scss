@@ -22,5 +22,11 @@
 
     &__tag {
         margin: 0.5rem 0.25rem;
+        padding: 6px 8px;
+        color: $primary-dark;
+
+        @include tablet{
+            padding: 8px 16px;
+        }
     }
 }

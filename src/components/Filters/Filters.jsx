@@ -13,6 +13,7 @@ const Filters = ({ selectedFilter, setSelectedFilter }) => {
         }
 
         getTags();
+       
     }, []);
 
     return (
@@ -30,7 +31,9 @@ const Filters = ({ selectedFilter, setSelectedFilter }) => {
                             selectedFilter === filter
                                 ? setSelectedFilter(undefined)
                                 : setSelectedFilter(filter);
+                                console.log(setSelectedFilter);
                         }}
+                    
                     />
                 ))}
             </div>

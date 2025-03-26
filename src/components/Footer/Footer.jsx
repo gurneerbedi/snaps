@@ -1,6 +1,5 @@
 import FacebookIcon from "../../assets/images/icons/Facebook.svg";
 import InstagramIcon from "../../assets/images/icons/Instagram.svg";
-import XIcon from "../../assets/images/icons/X_twitter.svg";
 import Pinterest from "../../assets/images/icons/Pinterest.svg";
 import "./Footer.scss";
 
@@ -52,11 +51,7 @@ const Footer = () => {
                                 <img src={FacebookIcon} alt="" />
                             </a>
                         </li>
-                        <li>
-                            <a className="footer__link" href="">
-                                <img src={XIcon} alt="" />
-                            </a>
-                        </li>
+                       
                         <li>
                             <a className="footer__link" href="">
                                 <img src={InstagramIcon} alt="" />
